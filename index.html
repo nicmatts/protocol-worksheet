@@ -16,10 +16,17 @@
     <div class="container">
         <div class="heading"><h1>Public Hearing Protocol Worksheet</h1></div>
         
-        <div id="form-container">
+        <div id="form-container" class="col-md-4 offset-4">
             <form name="testform" action="">
-                <input type="text" name="testfield1" id="item-number" />
-                <input type="text" name="testfield2" id="item-title" />
+                    <div class="form-label-group">
+                        <label for="item-number" class="sr-only">Agenda item number</label>
+                        <input type="text" id="item-number" class="form-control" placeholder="Agenda item number" required autofocus>
+                    </div>
+
+                    <div class="form-label-group">
+                        <label for="item-title" class="sr-only">Title of agenda item</label>
+                        <input type="textarea" id="item-title" class="form-control" placeholder="Title of agenda item" required">
+                    </div>
                 <button type="button" class="btn btn-outline-primary" id="submit">Generate worksheet</button>
             </form>
         </div>
