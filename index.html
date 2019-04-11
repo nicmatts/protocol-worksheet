@@ -18,29 +18,36 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div id="form-container" class="col-md-4 offset-4">
+             <div class="col-md-8 offset-2">
+                <div></div>
+             </div>
+        </div>
+        <div class="row">
+            <div id="form-container" class="col-md-6 offset-3">
                 <form name="testform" action="">
-                        <div class="input-group mb-3 input-group-lg">
-                          <div class="input-group-prepend">
+                    <div class="input-group mb-3 input-group-lg">
+                        <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon3">Agenda item number</span>
-                          </div>
-                          <input type="text" class="form-control" id="item-number" aria-describedby="basic-addon3">
                         </div>
+                        <input type="text" class="form-control" id="item-number" aria-describedby="basic-addon3">
+                    </div>
 
-                        <div class="input-group input-group-lg">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Title of hearing item</span>
-                            </div>
-                                <textarea class="form-control" aria-label="With textarea" id="item-title" ></textarea>
+                    <div class="input-group input-group-lg">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Title of hearing item</span>
                         </div>
+                        <textarea class="form-control" aria-label="With textarea" id="item-title" ></textarea>   
+                    </div>
+                    
+                    <button type="button" class="btn btn-secondary btn-lg btn-block mt-4" id="submit">Generate worksheet</button>
 
-                    <button type="button" class="btn btn-outline-primary" id="submit">Generate worksheet</button>
                 </form>
             </div>
         </div>
 
+
         <div class="row">
-            <div id="protocol" class="col-md-8 offset-2">
+            <div id="protocol" class="col-md-8 offset-2 mt-4 protocol">
                 <h2>Agenda item number <span id="show-item-number"></span></h2>
                 <ol style="font-size: 1.05em; line-height: 1.5em;"> 
                     <li><strong>Read the title</strong> of the item: <span id="show-item-title"></span></li>
