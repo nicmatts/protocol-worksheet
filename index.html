@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Public Hearing Protocol Worksheet</title>
+    <title>Public Hearing Protocol</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
     <script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
@@ -13,7 +13,7 @@
 </head>
 <body>
     <header class="navbar navbar-dark bg-primary flex-column flex-md-row bd-navbar justify-content-center">
-        <a class="navbar-brand" href="#"><h2>Public Hearing Protocol Worksheet</h2></a>
+        <a class="navbar-brand" href="#"><h2 class="d-print-none">Public Hearing Protocol Worksheet</h2></a>
     </header>
 
     <div class="container-fluid">
@@ -47,8 +47,8 @@
 
         <div class="row">
             <div id="protocol" class="col-md-8 offset-2 mt-4 protocol">
-                <div class="d-none d-print-block"><h1>Public Hearing Protocol</h1>></div>
-                <h2>Agenda item number <span id="show-item-number"></span></h2>
+                <div class="d-none d-print-block"><h2>Public Hearing: <span id="show-item-title"></span</h2></div>
+                <h3>Agenda item number <span id="show-item-number"></span></h3>
                 <ol style="font-size: 1.05em; line-height: 1.5em;"> 
                     <li><strong>Read the title</strong> of the item: <span id="show-item-title"></span></li>
                     <li><strong>Ask for a motion</strong> to open the public hearing.
