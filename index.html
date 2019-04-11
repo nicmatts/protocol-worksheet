@@ -12,80 +12,89 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-    
-    <div class="container">
-        <div class="heading text-center"><h1>Public Hearing Protocol Worksheet</h1>
-            <h2>For chairs of boards and commissions</h2>
+    <header class="navbar navbar-dark bg-primary flex-column flex-md-row bd-navbar justify-content-center">
+        <a class="navbar-brand" href="#"><h2>Public Hearing Protocol Worksheet</h2></a>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div id="form-container" class="col-md-4 offset-4">
+                <form name="testform" action="">
+                        <div class="input-group mb-3 input-group-lg">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon3">Agenda item number</span>
+                          </div>
+                          <input type="text" class="form-control" id="item-number" aria-describedby="basic-addon3">
+                        </div>
+
+                        <div class="input-group input-group-lg">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Title of hearing item</span>
+                            </div>
+                                <textarea class="form-control" aria-label="With textarea" id="item-title" ></textarea>
+                        </div>
+
+                    <button type="button" class="btn btn-outline-primary" id="submit">Generate worksheet</button>
+                </form>
+            </div>
         </div>
-        
-        <div id="form-container" class="col-md-4 offset-4">
-            <form name="testform" action="">
-                    <div class="form-label-group">
-                        <label for="item-number" class="sr-only">Agenda item number</label>
-                        <input type="text" id="item-number" class="form-control" placeholder="Agenda item number" required autofocus>
-                    </div>
 
-                    <div class="form-label-group">
-                        <label for="item-title" class="sr-only">Title of agenda item</label>
-                        <input type="textarea" id="item-title" class="form-control" placeholder="Title of agenda item" required">
-                    </div>
-                <button type="button" class="btn btn-outline-primary" id="submit">Generate worksheet</button>
-            </form>
-        </div>
-
-
-        <div id="protocol">
-            <h2>Agenda item number <span id="show-item-number"></span></h2>
-            <ol style="font-size: 1.05em; line-height: 1.5em;"> 
-                <li>Read the title of the item: <strong><span id="show-item-title"></span></strong></li>
-                <li>Ask for a <strong>Motion to Open the Public Hearing</strong>.
-                    <ul>
+        <div class="row">
+            <div id="protocol" class="col-md-8 offset-2">
+                <h2>Agenda item number <span id="show-item-number"></span></h2>
+                <ol style="font-size: 1.05em; line-height: 1.5em;"> 
+                    <li><strong>Read the title</strong> of the item: <span id="show-item-title"></span></li>
+                    <li><strong>Ask for a motion</strong> to open the public hearing.
+                        <ul>
+                            <li>Motion</li>
+                            <li>Second</li>
+                            <li>Discussion</li>
+                            <li>Vote</li>
+                        </ul>
+                    </li>
+                    <li><strong>Ask staff</strong> to provide background information.</li>
+                    <li><strong>Invite applicant</strong> to step forward to address commission.</li>
+                    <li><strong>Ask if there are any citizens who wish to be heard</strong> either for or against the requested action.
+                    Once at the podium, ask them to begin by stating their name and address for the record.</li>
+                    <li><strong>Ask for a motion</strong> to close the public hearing.
+                        <ul>
                         <li>Motion</li>
                         <li>Second</li>
                         <li>Discussion</li>
                         <li>Vote</li>
-                    </ul>
-                </li>
-                <li>Ask staff to provide background information.</li>
-                <li>Invite applicant to step forward to address commission.</li>
-                <li>Ask if there are any citizens who wish to be heard either for or against the requested action.
-                Once at the podium, ask them to begin by stating their name and address for the record.</li>
-                <li>Ask commissioners for motion to close the public hearing.
-                    <ul>
-                    <li>Motion</li>
-                    <li>Second</li>
-                    <li>Discussion</li>
-                    <li>Vote</li>
-                    </ul>
-                </li>
-                <li>Ask commissioners for a motion on the item. <em>Motioner must state the entire motion with any
-                recommended conditions set forth by staff or changes to said conditions.</em>
-                    <ul>
-                    <li>Motion</li>
-                    <li>Second</li>
-                    </ul>
-                </li>
-                <li>Open the floor to discussion by commission members. Once all members have completed their 
-                    debate, the chair asks members if they are ready for the question or vote.
-                </li>
-                <li>Ask for a vote on the motion. The chair may request an individual voice vote to
-                    ensure an accurate record.
-                </li>
-                <li>Announce the outcome of the vote.
+                        </ul>
+                    </li>
+                    <li><strong>Ask commissioners for a motion on the item.</strong> <em>Motioner must state the entire motion with any
+                    recommended conditions set forth by staff or changes to said conditions.</em>
                         <ul>
-                            <li>Motion passes OR</li>
-                            <li>Motion fails</li>
-                        </ul>    
-                </li>
-                <li>Announce the next item of business.</li>
-            </ol>
+                        <li>Motion</li>
+                        <li>Second</li>
+                        </ul>
+                    </li>
+                    <li><strong>Open the floor to discussion</strong> by commission members. Once all members have completed their 
+                        debate, the chair asks members if they are ready for the question or vote.
+                    </li>
+                    <li><strong>Ask for a vote on the motion.</strong> The chair may request an individual voice vote to
+                        ensure an accurate record.
+                    </li>
+                    <li><strong>Announce the outcome</strong> of the vote.
+                            <ul>
+                                <li>Motion passes OR</li>
+                                <li>Motion fails</li>
+                            </ul>    
+                    </li>
+                    <li><strong>Announce</strong> the next item of business.</li>
+                </ol>
 
-            <button type="button" class="btn btn-primary" id="print-page" onclick="window.print();">Print worksheet</button>
-            <button type="button" class="btn btn-outline-primary" id="reload" onclick="location.reload();">Start over</button>
-
+                <button type="button" class="btn btn-primary" id="print-page" onclick="window.print();">Print worksheet</button>
+                <button type="button" class="btn btn-outline-primary" id="reload" onclick="location.reload();">Start over</button>
+            </div>
         </div>
+    
     </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>        
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>        
 </body>
 </html>
