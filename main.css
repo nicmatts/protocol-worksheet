@@ -7,3 +7,7 @@ form, .protocol {
     border-radius: 5px;
     padding: 1rem;
 }
+
+.bg-primary {
+    background-color: #0071B4;
+}
