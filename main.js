@@ -17,5 +17,9 @@ jQuery(document).ready(function($){
             location.reload();
         });
 
-      });
+    });
+      
+    $( "li" ).click(function() {
+        $( this ).toggleClass( "strike" );
+    }); 
 });

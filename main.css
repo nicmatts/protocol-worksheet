@@ -8,6 +8,10 @@ form, .protocol {
     padding: 1rem;
 }
 
+.strike {
+    color: gray;
+}
+
 #mhd-blue {
     background-color: #0071B4!important;
 }
@@ -15,4 +19,5 @@ form, .protocol {
 #submit, #print-page {
     background-color: #0DA2FB!important;
 }
+
 
