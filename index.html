@@ -45,9 +45,9 @@
             </div>
         </div>
 
-
         <div class="row">
             <div id="protocol" class="col-md-8 offset-2 mt-4 protocol">
+                <div class="d-none d-print-block"><h1>Public Hearing Protocol</h1>></div>
                 <h2>Agenda item number <span id="show-item-number"></span></h2>
                 <ol style="font-size: 1.05em; line-height: 1.5em;"> 
                     <li><strong>Read the title</strong> of the item: <span id="show-item-title"></span></li>
@@ -93,8 +93,8 @@
                     <li><strong>Announce</strong> the next item of business.</li>
                 </ol>
 
-                <button type="button" class="btn btn-primary" id="print-page" onclick="window.print();">Print worksheet</button>
-                <button type="button" class="btn btn-outline-primary" id="reload" onclick="location.reload();">Start over</button>
+                <button type="button" class="btn btn-primary d-print-none" id="print-page" onclick="window.print();">Print worksheet</button>
+                <button type="button" class="btn btn-outline-primary d-print-none" id="reload" onclick="location.reload();">Start over</button>
             </div>
         </div>
     
