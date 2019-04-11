@@ -4,12 +4,12 @@ jQuery(document).ready(function($){
     $( "#submit" ).click(function() {
         var itemNumber = $("#item-number").val();
         var itemTitle = $("#item-title").val();
-        
+    
+        document.title = "Public Hearing: " + itemTitle;
 
         $( "span#show-item-number" ).append(itemNumber);  
         $( "span#show-item-title" ).append(itemTitle); 
-        console.log(itemNumber); 
-        console.log(itemTitle);
+
         $( "#form-container").hide();
         $( "#protocol" ).show();
         
